@@ -76,7 +76,8 @@ export default function App() {
               alt="balloon"
               className="fixed left-0 w-dvw h-auto"
               style={{
-                zIndex: 200
+                zIndex: 200,
+                scale:3
               }}
               initial={{ y: window.innerHeight, animationDelay: 5 }} // start at bottom
               animate={{ y: -window.innerHeight, opacity: 0 }} // move off top
