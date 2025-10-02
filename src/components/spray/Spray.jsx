@@ -34,7 +34,7 @@ function Spray({ durationEnded }) {
                     x={0}
                     y={0.5}
                     angle={0}
-                    spread={70}
+                    spread={100}
                     particleCount={150}
                 />
 
@@ -44,7 +44,7 @@ function Spray({ durationEnded }) {
                     x={1}
                     y={0.5}
                     angle={180}
-                    spread={70}
+                    spread={100}
                     particleCount={150}
                 />
             </>}
