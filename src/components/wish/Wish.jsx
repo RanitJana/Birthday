@@ -39,7 +39,7 @@ function Wish() {
     return (
         <motion.div
             className='fixed top-0 left-0 z-50 h-dvh w-dvw 
-                       bg-[url("/src/assets/paper.jpg")] 
+                       bg-[url("/assets/paper.jpg")] 
                        bg-cover bg-center flex flex-col items-center justify-center text-center p-6 min-h-[50rem]'
             initial={{ x: "100%", opacity: 0 }}   // start off-screen to the right
             animate={{ x: 0, opacity: 1 }}        // slide in to position
@@ -58,7 +58,7 @@ function Wish() {
 
             {/* Image */}
             <motion.img
-                src="/src/assets/gf.jpg"
+                src="/assets/gf.jpg"
                 alt="Neha"
                 className='w-44 h-44 rounded-full object-cover mb-6 shadow-2xl border-4 border-b-rose-800'
                 initial={{ scale: 0 }}

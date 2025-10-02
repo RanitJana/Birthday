@@ -13,7 +13,7 @@ function CatWishing() {
         transition={{ type: "spring", stiffness: 100, damping: 20, duration: 1.5 }}
       >
         <img
-          src="/src/assets/fat-cat-birthday.gif"
+          src="/assets/fat-cat-birthday.gif"
           className='w-[20%] min-w-[8rem] mb-5'
           alt="birthday cat"
         />
@@ -27,7 +27,7 @@ function CatWishing() {
         transition={{ type: "spring", stiffness: 100, damping: 20, duration: 1.5 }}
       >
         <img
-          src="/src/assets/happy-birthday-animals.gif"
+          src="/assets/happy-birthday-animals.gif"
           className='w-[50%] min-w-[8rem]'
           alt="birthday animals"
         />

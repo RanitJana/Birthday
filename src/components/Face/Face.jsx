@@ -33,7 +33,7 @@ export default function Face() {
 
             {/* Phone frame above video */}
             <img
-                src="/src/assets/phone.png"
+                src="/assets/phone.png"
                 alt="phone frame"
                 className="absolute inset-0 z-20 w-full h-full pointer-events-none"
             />

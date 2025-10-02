@@ -1,4 +1,4 @@
-import lightImg from "../../assets/light2.png"; // adjust path if needed
+import lightImg from "/assets/light2.png"; // adjust path if needed
 // eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 

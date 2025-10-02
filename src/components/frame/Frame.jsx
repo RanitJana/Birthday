@@ -7,7 +7,7 @@ function Frame() {
             {/* Inner div for “glass” / photo */}
             <div className='w-full h-full bg-white rounded-sm overflow-hidden'>
                 <img
-                    src="/src/assets/gf.jpg"
+                    src="/assets/gf.jpg"
                     alt=""
                     className='w-full h-full object-cover'
                 />

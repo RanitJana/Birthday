@@ -21,13 +21,13 @@ function Cake({ setOpenWish, setBalloonFlying }) {
             <div className='relative flex justify-center w-full'>
                 <div className='w-fit relative'>
                     {<Balloons />}
-                    <img src="/src/assets/table.png" alt="" className='max-w-[40rem] w-full' style={{
+                    <img src="/assets/table.png" alt="" className='max-w-[40rem] w-full' style={{
                         zIndex: 10
                     }} />
 
                     <div className='absolute bottom-[40%] left-20 flex justify-center right-0 w-full'>
                         <Face />
-                        <img src="/src/assets/cat-dancing.gif" alt="" className='absolute bottom-[-0.5rem] max-w-[8rem] w-[23%] left-[27%]' />
+                        <img src="/assets/cat-dancing.gif" alt="" className='absolute bottom-[-0.5rem] max-w-[8rem] w-[23%] left-[27%]' />
                     </div>
 
                     <CandleCake setOpenWish={setOpenWish} setBalloonFlying={setBalloonFlying} />

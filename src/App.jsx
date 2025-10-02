@@ -22,7 +22,7 @@ export default function App() {
   usePreloadImages()
 
   useEffect(() => {
-    const music = new Audio("/src/assets/happy-birthday.mp3");
+    const music = new Audio("/assets/happy-birthday.mp3");
     music.volume = 0.8;
 
     // Loop the music
@@ -47,7 +47,7 @@ export default function App() {
 
 
   return (
-    <div className='w-dvw h-dvh bg-[url("./assets/modern-empty-room.jpg")] bg-cover bg-center font-[custom] text-[1.5rem]'>
+    <div className='w-dvw h-dvh bg-[url("/assets/modern-empty-room.jpg")] bg-cover bg-center font-[custom] text-[1.5rem]'>
       <Countdown initialSeconds={duration} onFinish={setDurationEnded} />
       <CatGoing duration={duration} />
       {durationEnded && <>
@@ -61,7 +61,7 @@ export default function App() {
         {balloonFlying && (
           <>
             <motion.img
-              src="/src/assets/Balloon-Border.png"
+              src="/assets/Balloon-Border.png"
               alt="balloon"
               className="fixed left-0 w-dvw h-auto"
               style={{
@@ -72,7 +72,7 @@ export default function App() {
               transition={{ duration: 5, ease: "linear" }}
             />
             <motion.img
-              src="/src/assets/Balloon-Border.png"
+              src="/assets/Balloon-Border.png"
               alt="balloon"
               className="fixed left-0 w-dvw h-auto"
               style={{

@@ -43,7 +43,7 @@ export default function CandleCake({ setOpenWish, setBalloonFlying }) {
     return (
         <div className="absolute bottom-[80%] left-[-5rem] w-full z-30 flex justify-center">
             <motion.img
-                src="/src/assets/cake-crop.png"
+                src="/assets/cake-crop.png"
                 alt=""
                 className="z-30 max-w-[12rem] w-[30%]"
                 animate={{
@@ -83,7 +83,7 @@ export default function CandleCake({ setOpenWish, setBalloonFlying }) {
                         style={{ opacity: fireOpacity }}
                         className="w-3 h-6 mr-1 rounded-full bg-gradient-to-t from-yellow-400 via-orange-500 to-red-500 shadow-lg"
                     />
-                    <img src="/src/assets/1.png" alt="candle 1" className="max-w-10 w-[60%] mt-1" />
+                    <img src="/assets/1.png" alt="candle 1" className="max-w-10 w-[60%] mt-1" />
                 </div>
 
                 {/* Second Candle */}
@@ -94,7 +94,7 @@ export default function CandleCake({ setOpenWish, setBalloonFlying }) {
                         style={{ opacity: fireOpacity }}
                         className="w-3 h-6 ml-2 rounded-full bg-gradient-to-t from-yellow-400 via-orange-500 to-red-500 shadow-lg"
                     />
-                    <img src="/src/assets/7.png" alt="candle 7" className="max-w-11 w-[65%] mt-1" />
+                    <img src="/assets/7.png" alt="candle 7" className="max-w-11 w-[65%] mt-1" />
                 </div>
             </div>
         </div>

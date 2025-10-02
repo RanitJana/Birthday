@@ -33,7 +33,7 @@ export default function CatGoing({ duration = 10 }) {
                 <div className='relative mb-8 top-10 left-0 text-[17px] border-2 rounded-2xl px-3 py-1 bg-white shadow-lg'>
                     {quote}
                 </div>
-                <img src='/src/assets/cat-running.gif' className='w-[10rem]' alt='running cat' />
+                <img src='/assets/cat-running.gif' className='w-[10rem]' alt='running cat' />
             </div>
         </div>
     );

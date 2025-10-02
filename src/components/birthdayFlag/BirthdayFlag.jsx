@@ -16,7 +16,7 @@ function BirthdayFlag() {
                 damping: 12,
             }}
         >
-            <img src="/src/assets/birthday.png" alt="birthday flag" className='z-20' />
+            <img src="/assets/birthday.png" alt="birthday flag" className='z-20' />
         </motion.div>
     )
 }
