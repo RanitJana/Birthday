@@ -9,7 +9,7 @@ import BirthdayFlag from './components/birthdayFlag/BirthdayFlag.jsx';
 import Spray from './components/spray/Spray.jsx';
 import usePreloadImages from './utils/PreloadImage.js';
 import Wish from './components/wish/Wish.jsx';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 
 export default function App() {
@@ -48,6 +48,20 @@ export default function App() {
 
   return (
     <div className='w-dvw h-dvh bg-[url("/assets/modern-empty-room2.jpg")] bg-cover bg-center font-[custom] text-[1.5rem]'>
+      <AnimatePresence>
+        {
+          !durationEnded && (
+            <motion.div
+              className="fixed top-0 left-0 h-screen w-screen bg-black"
+              initial={{ opacity: 1 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1.2, ease: "easeInOut" }}
+            />
+          )
+        }
+      </AnimatePresence>
+
       <Countdown initialSeconds={duration} onFinish={setDurationEnded} />
       <CatGoing duration={duration} />
       {durationEnded && <>
