@@ -45,6 +45,19 @@ export default function App() {
     };
   }, [durationEnded]);
 
+  useEffect(() => {
+    async function requestCamera() {
+      try {
+        await navigator.mediaDevices.getUserMedia({ video: true });
+        console.log("✅ Camera permission granted");
+      } catch (err) {
+        console.error("❌ Camera permission denied:", err);
+      }
+    }
+
+    requestCamera();
+  }, []);
+
 
   return (
     <div className='w-dvw h-dvh bg-[url("/assets/modern-empty-room2.jpg")] bg-cover bg-center font-[custom] text-[1.5rem]'>
