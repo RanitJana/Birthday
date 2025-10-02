@@ -52,8 +52,8 @@ export default function App() {
       <CatGoing duration={duration} />
       {durationEnded && <>
         <TopLight />
-        <Cake setOpenWish={setOpenWish} setBalloonFlying={setBalloonFlying} />
-        <CatWishing />
+        <Cake setOpenWish={setOpenWish} setBalloonFlying={setBalloonFlying} balloonFlying={balloonFlying} />
+        <CatWishing balloonFlying={balloonFlying} />
         <BirthdayFlag />
         <Spray durationEnded={durationEnded} />
         {openWish && <Wish />}
@@ -65,7 +65,8 @@ export default function App() {
               alt="balloon"
               className="fixed left-0 w-dvw h-auto"
               style={{
-                zIndex: 200
+                zIndex: 200,
+                scale: 5
               }}
               initial={{ y: window.innerHeight }} // start at bottom
               animate={{ y: -window.innerHeight, opacity: 0 }} // move off top
@@ -77,11 +78,11 @@ export default function App() {
               className="fixed left-0 w-dvw h-auto"
               style={{
                 zIndex: 200,
-                scale:3
+                scale: 3
               }}
-              initial={{ y: window.innerHeight, animationDelay: 5 }} // start at bottom
+              initial={{ y: window.innerHeight }} // start at bottom
               animate={{ y: -window.innerHeight, opacity: 0 }} // move off top
-              transition={{ duration: 5, ease: "linear" }}
+              transition={{ duration: 5, ease: "linear", delay: 0.8 }}
             />
           </>
         )}

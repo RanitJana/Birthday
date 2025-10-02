@@ -2,7 +2,7 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 
-function CatWishing() {
+function CatWishing({ balloonFlying }) {
   return (
     <div>
       {/* Cat coming up from bottom */}
@@ -12,6 +12,13 @@ function CatWishing() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 100, damping: 20, duration: 1.5 }}
       >
+        <span className='bg-white rounded-2xl px-1 text-sm border-2 py-1 ml-5'
+          style={{
+            opacity: balloonFlying ? 1 : 0,
+            scale: balloonFlying ? 1 : 0,
+            transition: "1s ease"
+          }}
+        >Maw maw maw</span>
         <img
           src="/assets/fat-cat-birthday.gif"
           className='w-[20%] min-w-[8rem] mb-5'
