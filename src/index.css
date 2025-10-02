@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: custom;
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: swap;
+  src: url("/src/fonts/Schoolbell-Regular.ttf") format("truetype");
+}
+
