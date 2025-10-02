@@ -14,7 +14,7 @@ import { motion } from "framer-motion";
 
 export default function App() {
 
-  const duration = (2 + Math.floor(Math.random() * 3));
+  const duration = (5 + Math.floor(Math.random() * 3));
   const [durationEnded, setDurationEnded] = useState(false);
   const [openWish, setOpenWish] = useState(false);
   const [balloonFlying, setBalloonFlying] = useState(false);
@@ -83,6 +83,18 @@ export default function App() {
               initial={{ y: window.innerHeight }} // start at bottom
               animate={{ y: -window.innerHeight, opacity: 0 }} // move off top
               transition={{ duration: 5, ease: "linear", delay: 0.8 }}
+            />
+            <motion.img
+              src="/assets/Balloon-Border.png"
+              alt="balloon"
+              className="fixed left-0 w-dvw h-auto"
+              style={{
+                zIndex: 200,
+                scale: 3
+              }}
+              initial={{ y: window.innerHeight }} // start at bottom
+              animate={{ y: -window.innerHeight, opacity: 0 }} // move off top
+              transition={{ duration: 5, ease: "linear", delay: 1.5 }}
             />
           </>
         )}

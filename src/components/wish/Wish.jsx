@@ -56,14 +56,14 @@ function Wish() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 100 }}
                 >
-                    🎉Happy Birthday, My dear Neha!🎉
+                    🎉Happy Birthday, My dear Neha!❤️
                 </motion.h2>
 
                 {/* Image */}
                 <motion.img
                     src="/assets/gf.jpg"
                     alt="Neha"
-                    className='w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover mb-6 shadow-2xl border-4 border-b-rose-800 mx-auto'
+                    className='w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover mb-6 shadow-2xl border-4 border-b-amber-800 mx-auto'
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 1, duration: 0.8, type: "spring", stiffness: 120 }}
@@ -73,7 +73,7 @@ function Wish() {
                 {displayedText.map((line, idx) => (
                     <motion.p
                         key={idx}
-                        className='text-base sm:text-xl text-gray-900 max-w-lg mx-auto mb-4 leading-relaxed'
+                        className='text-base sm:text-xl text-gray-900 font-bold max-w-lg mx-auto mb-4 leading-relaxed'
                         initial={{ opacity: 0 }}
                         animate={{ opacity: line.length > 0 ? 1 : 0 }}
                         transition={{ duration: 0.5 }}
