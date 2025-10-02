@@ -38,49 +38,55 @@ function Wish() {
 
     return (
         <motion.div
-            className='fixed top-0 left-0 z-50 h-dvh w-dvw 
-                       bg-[url("/assets/paper.jpg")] 
-                       bg-cover bg-center flex flex-col items-center justify-center text-center p-6 min-h-[50rem]'
-            initial={{ x: "100%", opacity: 0 }}   // start off-screen to the right
-            animate={{ x: 0, opacity: 1 }}        // slide in to position
+            className='fixed top-0 left-0 z-50 
+             h-screen w-screen
+             bg-[url("/assets/paper.jpg")] 
+             bg-cover bg-center 
+             overflow-y-auto
+             flex flex-col items-center justify-center text-center p-6'
+            initial={{ x: "100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ type: "spring", stiffness: 120, damping: 20, duration: 1.5 }}
         >
-
-            {/* Heading */}
-            <motion.h2
-                className='text-5xl font-extrabold text-pink-800 mb-6 drop-shadow-lg'
-                initial={{ y: -50, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 100 }}
-            >
-                🎉Happy Birthday, My dear Neha!🎉
-            </motion.h2>
-
-            {/* Image */}
-            <motion.img
-                src="/assets/gf.jpg"
-                alt="Neha"
-                className='w-44 h-44 rounded-full object-cover mb-6 shadow-2xl border-4 border-b-rose-800'
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ delay: 1, duration: 0.8, type: "spring", stiffness: 120 }}
-            />
-
-            {/* Typing Message */}
-            {displayedText.map((line, idx) => (
-                <motion.p
-                    key={idx}
-                    className='text-lg sm:text-xl text-gray-900 max-w-lg mb-4'
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: line.length > 0 ? 1 : 0 }}
-                    transition={{ duration: 0.5 }}
+            <div className='w-full max-w-2xl'>
+                {/* Heading */}
+                <motion.h2
+                    className='text-5xl font-extrabold text-pink-800 mb-6 drop-shadow-lg'
+                    initial={{ y: -50, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 1, type: "spring", stiffness: 100 }}
                 >
-                    {line}
-                    {lineIndex === idx && charIndex < fullText[idx].length && <span className='animate-pulse'>|</span>}
-                </motion.p>
-            ))}
+                    🎉Happy Birthday, My dear Neha!🎉
+                </motion.h2>
 
+                {/* Image */}
+                <motion.img
+                    src="/assets/gf.jpg"
+                    alt="Neha"
+                    className='w-44 h-44 rounded-full object-cover mb-6 shadow-2xl border-4 border-b-rose-800 mx-auto'
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: 1, duration: 0.8, type: "spring", stiffness: 120 }}
+                />
+
+                {/* Typing Message */}
+                {displayedText.map((line, idx) => (
+                    <motion.p
+                        key={idx}
+                        className='text-lg sm:text-xl text-gray-900 max-w-lg mx-auto mb-4'
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: line.length > 0 ? 1 : 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        {line}
+                        {lineIndex === idx && charIndex < fullText[idx].length && (
+                            <span className='animate-pulse'>|</span>
+                        )}
+                    </motion.p>
+                ))}
+            </div>
         </motion.div>
+
     );
 }
 

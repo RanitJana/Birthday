@@ -13,6 +13,7 @@ const images = [
     "/assets/cat-dancing.gif",
     "/assets/fat-cat-birthday.gif",
     "/assets/light2.png",
+    "/assets/paper.jpg",
 ];
 
 function usePreloadImages() {
