@@ -47,7 +47,7 @@ export default function App() {
 
 
   return (
-    <div className='w-dvw h-dvh bg-[url("/assets/modern-empty-room.jpg")] bg-cover bg-center font-[custom] text-[1.5rem]'>
+    <div className='w-dvw h-dvh bg-[url("/assets/modern-empty-room2.jpg")] bg-cover bg-center font-[custom] text-[1.5rem]'>
       <Countdown initialSeconds={duration} onFinish={setDurationEnded} />
       <CatGoing duration={duration} />
       {durationEnded && <>
